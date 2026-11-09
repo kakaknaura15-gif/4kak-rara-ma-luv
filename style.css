@@ -411,4 +411,71 @@ font-family: 'Caveat', cursive;
 font-size: 18px;
 color: var(--muted);
 }
+/* VINYL MUSIC PLAYER */
+
+.music-bar {
+    position: absolute;
+    top: 20px;
+    right: 6%;
+    left: 6%;
+    justify-content: space-between;
+}
+
+.music-label {
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+    letter-spacing: 0;
+}
+
+#musicBtn {
+    width: 62px;
+    height: 62px;
+    min-width: 62px;
+    border-radius: 50%;
+    border: 5px solid #d8c2c9;
+    background:
+        radial-gradient(circle,
+            #f4dce5 0 12%,
+            #755d70 13% 17%,
+            #29232c 18% 20%,
+            #51414f 21% 23%,
+            #17151b 24% 100%);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 0 5px 15px #9d7b8430;
+}
+
+.record-label {
+    font-size: 13px;
+    color: white;
+}
+
+#musicBtn.is-playing {
+    animation: vinylSpin 3s linear infinite;
+}
+
+@keyframes vinylSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 650px) {
+    .music-bar {
+        top: 15px;
+    }
+
+    #musicBtn {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+    }
+}
+
 
