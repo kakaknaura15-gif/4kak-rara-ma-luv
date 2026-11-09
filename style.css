@@ -602,5 +602,93 @@ margin-bottom: 20px;
 height: 200px;
 }
 }
+/* VINYL MUSIC PLAYER */
+
+.music-bar {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 18px;
+padding: 22px;
+background: #f8f3fa;
+}
+
+.vinyl-wrapper {
+width: 65px;
+height: 65px;
+}
+
+.vinyl {
+width: 65px;
+height: 65px;
+border-radius: 50%;
+background:
+repeating-radial-gradient(
+circle,
+#302638 0px,
+#302638 2px,
+#48384e 3px,
+#302638 4px
+);
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.vinyl-center {
+width: 19px;
+height: 19px;
+background: #d9b9dc;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 11px;
+}
+
+.vinyl.playing {
+animation: vinylSpin 3s linear infinite;
+}
+
+@keyframes vinylSpin {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}
+
+.music-info {
+text-align: left;
+}
+
+.music-label {
+font-size: 9px;
+letter-spacing: 2px;
+color: #a18aaa;
+}
+
+.music-info h3 {
+font-family: 'Playfair Display', serif;
+color: #73547f;
+margin: 3px 0;
+font-size: 17px;
+}
+
+.music-info p {
+font-size: 11px;
+color: #9c899f;
+margin: 0;
+}
+
+#musicBtn {
+border: 1px solid #cdb6d5;
+background: transparent;
+color: #795d85;
+border-radius: 30px;
+padding: 9px 16px;
+font-size: 10px;
+letter-spacing: 1px;
+cursor: pointer;
+}
 
 
