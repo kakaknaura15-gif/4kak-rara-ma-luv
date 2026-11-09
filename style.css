@@ -1,1 +1,414 @@
+:root {
+--pink: #d9aeb5;
+--dark: #61474e;
+--cream: #fffaf5;
+--light: #f5e8e7;
+--lavender: #e9e2ef;
+--muted: #a78e91;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  }
+
+body {
+background: var(--cream);
+color: var(--dark);
+font-family: 'DM Sans', sans-serif;
+overflow-x: hidden;
+}
+
+/* MUSIC */
+
+.music-bar {
+position: absolute;
+top: 0;
+width: 100%;
+padding: 20px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 12px;
+letter-spacing: 2px;
+z-index: 10;
+}
+
+.music-bar button {
+background: transparent;
+border: 1px solid var(--pink);
+color: var(--dark);
+padding: 10px 18px;
+border-radius: 30px;
+cursor: pointer;
+font-size: 10px;
+letter-spacing: 1px;
+}
+
+/* HERO */
+
+.hero {
+min-height: 100vh;
+background:
+radial-gradient(circle at 80% 20%, #f2dfe2, transparent 35%),
+radial-gradient(circle at 15% 80%, #e9e2ef, transparent 35%),
+var(--cream);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+position: relative;
+padding: 100px 20px;
+}
+
+.hero-content {
+animation: appear 1.5s ease;
+}
+
+.eyebrow,
+.section-label {
+font-size: 10px;
+letter-spacing: 3px;
+color: var(--muted);
+}
+
+.hero h1 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(55px, 10vw, 105px);
+font-weight: 400;
+line-height: 1.15;
+margin: 30px 0;
+}
+
+.hero h1 i,
+h2 i {
+color: var(--pink);
+font-weight: 400;
+}
+
+.hero p {
+font-size: 14px;
+line-height: 2;
+color: #987f83;
+}
+
+.main-button {
+display: inline-block;
+margin-top: 35px;
+padding: 14px 27px;
+border: 1px solid var(--pink);
+border-radius: 40px;
+text-decoration: none;
+color: var(--dark);
+font-size: 12px;
+transition: .3s;
+}
+
+.main-button:hover {
+background: var(--pink);
+color: white;
+}
+
+.hero-bottom {
+position: absolute;
+bottom: 25px;
+font-family: 'Caveat', cursive;
+font-size: 19px;
+color: var(--muted);
+}
+
+/* SECTIONS */
+
+.section {
+padding: 120px 10%;
+text-align: center;
+}
+
+.section h2,
+.letter-paper h2,
+.ending h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(35px, 6vw, 55px);
+font-weight: 400;
+margin: 25px 0;
+}
+
+.intro-text {
+max-width: 650px;
+margin: 35px auto;
+text-align: left;
+}
+
+.intro-text p {
+font-size: 14px;
+line-height: 2.2;
+margin-bottom: 18px;
+color: #887378;
+}
+
+.little-note {
+font-family: 'Caveat', cursive;
+font-size: 25px;
+color: var(--pink);
+margin-top: 40px;
+}
+
+/* MEMORIES */
+
+.memories {
+background: #f7eeee;
+}
+
+.section-description {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 55px;
+}
+
+.memory-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 950px;
+margin: auto;
+}
+
+.memory-card {
+background: var(--cream);
+padding: 15px 15px 30px;
+border-radius: 5px;
+transition: .4s;
+}
+
+.memory-card:hover {
+transform: translateY(-8px) rotate(-1deg);
+}
+
+.memory-placeholder {
+height: 210px;
+background: linear-gradient(140deg, #ead8dd, #e9e2ef);
+display: grid;
+place-items: center;
+font-size: 45px;
+color: white;
+margin-bottom: 22px;
+}
+
+.memory-card h3 {
+font-family: 'Playfair Display', serif;
+font-size: 19px;
+font-weight: 400;
+margin-bottom: 12px;
+}
+
+.memory-card p {
+font-size: 11px;
+line-height: 1.8;
+color: var(--muted);
+}
+
+/* LETTER */
+
+.letter-section {
+padding: 120px 20px;
+background: #eee8f0;
+}
+
+.letter-paper {
+max-width: 750px;
+background: #fffdf9;
+margin: auto;
+padding: 75px clamp(25px, 8vw, 80px);
+box-shadow: 0 15px 50px rgba(100, 70, 80, .07);
+position: relative;
+}
+
+.letter-paper h2 {
+font-size: 43px;
+text-align: left;
+}
+
+.letter-decoration {
+position: absolute;
+top: 45px;
+right: 50px;
+color: var(--pink);
+font-size: 35px;
+}
+
+.letter-content {
+text-align: left;
+margin-top: 35px;
+}
+
+.letter-content p {
+font-size: 14px;
+line-height: 2.1;
+color: #806d71;
+margin-bottom: 23px;
+}
+
+.letter-ending {
+margin-top: 50px;
+font-family: 'Caveat', cursive;
+font-size: 23px;
+line-height: 1.7;
+color: var(--muted);
+}
+
+.letter-ending span {
+font-size: 38px;
+color: var(--pink);
+}
+
+/* ENDING */
+
+.ending {
+min-height: 85vh;
+display: grid;
+place-items: center;
+text-align: center;
+padding: 80px 20px;
+background:
+radial-gradient(circle at 20% 30%, #eee4f0, transparent 40%),
+var(--cream);
+}
+
+.ending-content {
+max-width: 550px;
+}
+
+.ending p {
+color: var(--muted);
+font-size: 14px;
+line-height: 2;
+}
+
+.ending-heart {
+font-size: 65px;
+color: var(--pink);
+margin: 35px 0;
+animation: heartbeat 2s infinite;
+}
+
+.ending h3 {
+font-family: 'Playfair Display', serif;
+font-weight: 400;
+font-size: 23px;
+}
+
+.signature {
+display: block;
+margin-top: 25px;
+font-family: 'Caveat', cursive;
+color: var(--pink);
+font-size: 24px;
+}
+
+/* FLOATING DECORATIONS */
+
+.floating-decorations {
+position: fixed;
+inset: 0;
+pointer-events: none;
+overflow: hidden;
+z-index: 20;
+}
+
+.floating-item {
+position: absolute;
+bottom: -50px;
+opacity: .55;
+animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+from {
+transform: translateY(0) rotate(0deg);
+opacity: 0;
+}
+
+15% {
+    opacity: .65;
+}
+
+to {
+    transform: translateY(-110vh) rotate(300deg);
+    opacity: 0;
+}
+
+}
+
+@keyframes heartbeat {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.15); }
+}
+
+@keyframes appear {
+from {
+opacity: 0;
+transform: translateY(25px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+.music-bar {
+    padding: 18px 5%;
+    font-size: 9px;
+}
+
+.music-bar button {
+    padding: 9px 12px;
+    font-size: 9px;
+}
+
+.section {
+    padding: 85px 7%;
+}
+
+.memory-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+}
+
+.memory-placeholder {
+    height: 230px;
+}
+
+.letter-section {
+    padding: 70px 15px;
+}
+
+.letter-paper {
+    padding: 55px 25px;
+}
+
+.letter-paper h2 {
+    font-size: 35px;
+}
+
+.letter-content p {
+    font-size: 13px;
+}
+
+}
+
+footer {
+text-align: center;
+padding: 25px;
+font-family: 'Caveat', cursive;
+font-size: 18px;
+color: var(--muted);
+}
 
