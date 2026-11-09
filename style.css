@@ -477,5 +477,130 @@ color: var(--muted);
         min-width: 52px;
     }
 }
+/* ILMI LETTER */
+.ilmi-section {
+padding: 100px 24px;
+text-align: center;
+background: #f8f3fa;
+}
+
+.ilmi-envelope {
+max-width: 430px;
+margin: 45px auto 0;
+text-align: center;
+}
+
+.ilmi-envelope summary {
+list-style: none;
+cursor: pointer;
+padding: 35px 20px;
+border: 1px solid #e5d5ec;
+border-radius: 18px;
+background: #fffaff;
+box-shadow: 0 12px 35px rgba(120, 85, 140, 0.09);
+transition: 0.3s ease;
+}
+
+.ilmi-envelope summary::-webkit-details-marker {
+display: none;
+}
+
+.ilmi-envelope summary:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 35px rgba(120, 85, 140, 0.15);
+}
+
+.envelope-icon {
+font-size: 42px;
+margin-bottom: 12px;
+}
+
+.ilmi-envelope summary span {
+display: block;
+font-family: 'Playfair Display', serif;
+font-size: 20px;
+color: #73547f;
+}
+
+.ilmi-envelope summary small {
+display: block;
+margin-top: 10px;
+color: #aa91b5;
+font-family: 'Caveat', cursive;
+font-size: 17px;
+}
+
+.ilmi-letter {
+margin-top: 20px;
+padding: 40px 30px;
+background: #fffdfb;
+border: 1px solid #eaddea;
+border-radius: 15px;
+text-align: left;
+box-shadow: 0 12px 35px rgba(120, 85, 140, 0.08);
+animation: letterOpen 0.6s ease;
+}
+
+.ilmi-stamp {
+display: block;
+text-align: right;
+font-size: 25px;
+color: #b99ac8;
+}
+
+.ilmi-letter h3 {
+font-family: 'Playfair Display', serif;
+color: #75577f;
+font-size: 25px;
+margin-bottom: 25px;
+}
+
+.ilmi-letter p {
+color: #766b76;
+font-size: 14px;
+line-height: 2;
+margin-bottom: 18px;
+}
+
+.ilmi-signature {
+margin-top: 35px;
+font-family: 'Caveat', cursive;
+color: #9679a2;
+font-size: 20px;
+}
+
+.ilmi-signature span {
+font-size: 27px;
+}
+
+@keyframes letterOpen {
+from {
+opacity: 0;
+transform: translateY(15px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+/* MEMORIES PHOTOS */
+.memory-card {
+overflow: hidden;
+}
+
+.memory-card img {
+width: 100%;
+height: 230px;
+object-fit: cover;
+display: block;
+border-radius: 12px;
+margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+.memory-card img {
+height: 200px;
+}
+}
 
 
