@@ -34,28 +34,30 @@ setTimeout(() => {
 setInterval(createDecoration, 900);
 
 // BACKGROUND MUSIC
+// VINYL MUSIC PLAYER
 
 const music = document.getElementById("backgroundMusic");
-
 const musicBtn = document.getElementById("musicBtn");
 
 musicBtn.addEventListener("click", () => {
 
-if (music.paused) {
+    if (music.paused) {
 
-    music.play();
+        music.play().then(() => {
+            musicBtn.classList.add("is-playing");
+        }).catch(error => {
+            console.log("Music could not be played:", error);
+        });
 
-    musicBtn.innerHTML = "PAUSE MUSIC ♡";
+    } else {
 
-} else {
+        music.pause();
+        musicBtn.classList.remove("is-playing");
 
-    music.pause();
-
-    musicBtn.innerHTML = "PLAY MUSIC ♡";
-
-}
+    }
 
 });
+
 
 // WELCOME MESSAGE
 
