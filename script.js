@@ -1,24 +1,21 @@
-// INDEPENDENT FLOATING DECORATIONS
+// FLOATING DECORATIONS
 
 const decorationArea = document.getElementById("decorations");
 
 const decorations = ["♡", "✿", "୨୧", "✧", "♥", "⋆"];
 
 function createDecoration() {
-
 const item = document.createElement("span");
 
 item.classList.add("floating-item");
-
-item.innerHTML =
-    decorations[Math.floor(Math.random() * decorations.length)];
+item.innerHTML = decorations[
+    Math.floor(Math.random() * decorations.length)
+];
 
 item.style.left = Math.random() * 100 + "vw";
-
 item.style.fontSize = (12 + Math.random() * 20) + "px";
 
 const duration = 8 + Math.random() * 12;
-
 item.style.animationDuration = duration + "s";
 
 decorationArea.appendChild(item);
@@ -29,35 +26,39 @@ setTimeout(() => {
 
 }
 
-// Each decoration has its own timing
-
 setInterval(createDecoration, 900);
 
-// BACKGROUND MUSIC
-// VINYL MUSIC PLAYER
+// BACKGROUND MUSIC & VINYL
 
 const music = document.getElementById("backgroundMusic");
 const musicBtn = document.getElementById("musicBtn");
+const vinyl = document.getElementById("vinyl");
 
-musicBtn.addEventListener("click", () => {
+musicBtn.addEventListener("click", async () => {
 
-    if (music.paused) {
+if (music.paused) {
 
-        music.play().then(() => {
-            musicBtn.classList.add("is-playing");
-        }).catch(error => {
-            console.log("Music could not be played:", error);
-        });
+    try {
+        await music.play();
 
-    } else {
+        musicBtn.textContent = "PAUSE ♡";
+        vinyl.classList.add("playing");
 
-        music.pause();
-        musicBtn.classList.remove("is-playing");
-
+    } catch (error) {
+        console.log("Music could not be played:", error);
+        musicBtn.textContent = "TRY AGAIN ♡";
     }
 
-});
+} else {
 
+    music.pause();
+
+    musicBtn.textContent = "PLAY ♡";
+    vinyl.classList.remove("playing");
+
+}
+
+});
 
 // WELCOME MESSAGE
 
