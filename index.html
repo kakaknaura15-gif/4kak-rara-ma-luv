@@ -23,16 +23,26 @@
 </head><body><div class="floating-decorations" id="decorations"></div>
 
 <!-- MUSIC -->
-<div class="music-bar">
-    <span class="music-label">a little song for you ♡</span>
+<!-- MUSIC PLAYER --><div class="music-bar"><div class="vinyl-wrapper">
+    <div class="vinyl" id="vinyl">
+        <div class="vinyl-center">
+            ♡
+        </div>
+    </div>
+</div>
 
-    <button id="musicBtn" aria-label="Play music">
-        <span class="record-label">♪</span>
-    </button>
+<div class="music-info">
+    <span class="music-label">A LITTLE SONG FOR YOU</span>
+    <h3>Honeybee</h3>
+    <p>Olivia ♡</p>
+</div>
 
-    <audio id="backgroundMusic" loop>
-        <source src="music/song.mp3" type="audio/mpeg">
-    </audio>
+<button id="musicBtn">PLAY ♡</button>
+
+<audio id="backgroundMusic" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
 </div>
 
 <!-- HERO -->
