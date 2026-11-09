@@ -24,8 +24,12 @@
 
 <!-- MUSIC -->
 <div class="music-bar">
-    <span>♪ a little song for you</span>
-    <button id="musicBtn">PLAY MUSIC ♡</button>
+    <span class="music-label">a little song for you ♡</span>
+
+    <button id="musicBtn" aria-label="Play music">
+        <span class="record-label">♪</span>
+    </button>
+
     <audio id="backgroundMusic" loop>
         <source src="music/song.mp3" type="audio/mpeg">
     </audio>
